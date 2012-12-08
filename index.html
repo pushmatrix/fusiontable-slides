@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Google Fusion Tables</title>
+
+    <meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+  </head>
+
+
+  <body>
+    <!--
+    Hey! I just met you
+    And this is crazy
+    Some here's some data
+    So map it maybe?
+
+    If it's hard to come by
+    In your citttttay
+    Then run a hackfest
+    But don't make it shitty.
+    -->
+
+    <div class="reveal">
+
+      <!-- Used to fade in a background when a specific slide state is reached -->
+      <div class="state-background"></div>
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+
+        <section>
+          <h1>Google Fusion Tables</h1>
+        </section>
+
+        <section>
+          <h1>Slides</h1>
+          <h3>http://pushmatrix.github.com/fusiontable-slides</h3>
+          <br/>
+          <h2>http://bit.ly/RgEPJb</h2>
+        </section>
+
+        <section>
+          <h3>What is Fusion Tables?</h3>
+          <h2><a href="https://sites.google.com/site/fusiontablestalks/stories" target="_blank">http://bit.ly/a4Ztr3</a></h2>
+            <a href="https://sites.google.com/site/fusiontablestalks/stories" target="_blank"><img src="images/gallery.png"></img></a>
+        </section>
+
+
+        <section>
+          <h2>What we'll need</h2>
+          <ul>
+            <li>Gmail account <a href="www.sublimetext.com" target="_blank" color="red">(www.gmail.com)</a></li>
+            <li>Text Editor <a href="www.sublimetext.com" target="_blank" color="red">(www.sublimetext.com)</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Today's Workshop</h3>
+          <h2><a href="https://sites.google.com/site/fusiontablestalks/talks/fusion-tables-where-2-0-workshop" target="_blank">http://bit.ly/i07DYI</a></h2>
+            <a href="https://sites.google.com/site/fusiontablestalks/talks/fusion-tables-where-2-0-workshop" target="_blank"><img src="images/workshop.png"></img></a>
+        </section>
+
+        <section>
+          <h3>Extra challenge: Play with Other Datasets</h3>
+          <h2><a href="http://research.google.com/tables" target="_blank">http://bit.ly/RgGyho</a></h2>
+            <a href="http://research.google.com/tables" target="_blank"><img src="images/search.png"></img></a>
+        </section>
+
+      </div>
+
+
+
+      <!-- Presentation progress bar -->
+      <div class="progress"><span></span></div>
+
+
+    <script src="lib/js/head.min.js"></script>
+
+    <script>
+      // Scripts that should be loaded before initializing
+      var scripts = [];
+
+      // If the browser doesn't support classList, load a polyfill
+      if( !document.body.classList ) {
+        scripts.push( 'lib/js/classList.js' );
+      }
+
+      // Load markdown parser if there are slides defined using markdown
+      if( document.querySelector( '[data-markdown]' ) ) {
+        scripts.push( 'lib/js/showdown.js' );
+        scripts.push( 'lib/js/data-markdown.js' );
+      }
+
+      scripts.push( 'js/reveal.js' );
+
+      // Load the scripts and, when completed, initialize reveal.js
+      head.js.apply( null, scripts.concat([function() {
+
+        // Fires when a slide with data-state=customevent is activated
+        Reveal.addEventListener( 'customevent', function() {
+          console.log( '"customevent" has fired' );
+        } );
+
+        // Fires each time a new slide is activated
+        Reveal.addEventListener( 'slidechanged', function( event ) {
+          // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+        } );
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          progress: true,
+          history: true,
+          mousewheel: false,
+          rollingLinks: false,
+
+          theme: 'beige', // default/neon/beige
+          transition: 'linear' // default/cube/page/concave/linear(2d)
+        });
+
+      }]));
+
+      // Load highlight.js for syntax highlighting of code samples
+      head.js( 'lib/js/highlight.js', function() {
+        hljs.initHighlightingOnLoad();
+      } );
+    </script>
+
+  </body>
+</html>
